@@ -21,7 +21,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/campus-notes.git
+git clone https://github.com/ItsMeeSahil/Campus-Notes.git
 Navigate into the project directory:
 
 bash
