@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .heading{
+            font-size:50px;
+            text-align: center;
+            margin: 30px;
+            animation: fadeIn s ease-in-out;
+        }
+        .main{
+            padding: 10px;
+            margin: 15px;
+            height: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: #444444;
+        }
+        .p1,.p2{
+            padding: 10px;
+            margin: 15px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        a{
+            color: black;
+        }
+        .Playlist {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 50%;
+            width: 85%;
+            margin-top: 10px;
+            animation: slideInUp 1s ease forwards;
+        }
+    .Playlist:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+    }
+    .Playlist img{
+        height: 100%;
+        border-right: 2px solid black;
+    
+    }
+    .Playlist a{
+        padding-left: 50px;
+        text-decoration: none;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .footer {
+        height: 100px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <h2 class="heading">PLAYLIST</h2> <!-- Main heading for the playlists section -->
+    
+    <div class="main"> <!-- Main container for the playlists -->
+        <div class="p1"> <!-- First column for playlists -->
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S" target="_blank"><h2>C Programming</h2></a> <!-- Link to the C Programming playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=dCNSDeeKCfs&list=PLqleLpAMfxGDq9Ehl8FUstcRrCRQPQO7n" target="_blank"><h2>C++</h2></a> <!-- Link to the C++ playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=AT14lCXuMKI&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU" target="_blank"><h2>DSA</h2></a> <!-- Link to the Data Structures and Algorithms playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=W7-u_w-0zHc&list=PLqleLpAMfxGAkXyW-QIwBPYDXpxAmb5La" target="_blank"><h2>Computer Fundamentals</h2></a> <!-- Link to the Computer Fundamentals playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=Tc_762NIOl0&list=PLbGui_ZYuhigWLoEeaGUHvz1ynoqD6RtZ" target="_blank"><h2>CSA</h2></a> <!-- Link to the Computer Science Fundamentals playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=nGJTWaaFdjc&list=PLISTUNloqsz0z9JJJke7g7PxRLvy6How9" target="_blank"><h2>OOP using C++</h2></a> <!-- Link to the Object-Oriented Programming using C++ playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Individual playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=JFF2vJaN0Cw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" target="_blank"><h2>Computer Networks</h2></a> <!-- Link to the Computer Networks playlist -->
+            </div>
+
+        </div> 
+        
+        <div class="p2"> <!-- Second column for playlists -->
+            <div class="Playlist"> <!-- SE playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=NlLM3sVF8wY&list=PLmXKhU9FNesTrw7n8ouPsSLEcduRlENHr" target="_blank"><h2>Software Engineering</h2></a> <!-- Link to the Software Engineering playlist -->
+            </div>
+            <div class="Playlist"> <!-- Python playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=7wnove7K-ZQ&list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" target="_blank"><h2>Python</h2></a> <!-- Link to the Python playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Web development playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=tVzUXW6siu0&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" target="_blank"><h2>Web Development</h2></a> <!-- Link to the Web Development playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- DBMS playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=YRnjGeQbsHQ&list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV" target="_blank"><h2>DBMS</h2></a> <!-- Link to the Database Management Systems playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- OS playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=xw_OuOhjauw&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD" target="_blank"><h2>OS</h2></a> <!-- Link to the Operating Systems playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- AI playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=uB3i-qV6VdM&list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI" target="_blank"><h2>AI</h2></a> <!-- Link to the Software Testing playlist -->
+            </div>
+
+            <div class="Playlist"> <!-- Data mining playlist item -->
+                <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube"> <!-- Thumbnail image for the playlist -->
+                <a href="https://www.youtube.com/watch?v=NphMcnU8ymU&list=PLxCzCOWd7aiHexyDzYgry0YZN29e7HdNB" target="_blank"><h2>Data warehouse and Mining</h2></a> <!-- Link to the Data Mining playlist -->
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Notes</title>
+    <style>
+        /* Resetting margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full height and width for html and body */
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Body styling with animation */
+        body {
+            animation: slideIn 1.5s ease-in-out;
+            background-color: white; /* Background color for the body */
+        }
+
+        /* Sticky header styles */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 4; /* Ensures header stays above other content */
+            background-color: #444444; /* Header background color */
+        }
+
+        /* Navigation styles */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            height: 20%; /* Height of the navigation */
+            padding: 20px 10px; /* Padding for navigation */
+        }
+
+        /* Link styling within navigation */
+        .nav a {
+            text-decoration: none; /* No underline */
+            display: flex;
+            padding-top: 15px; /* Space above text */
+            color: #ffffff; /* Text color */
+        }
+
+        /* Main title in navigation */
+        .nav h1 {
+            font-size: 45px; /* Font size for the title */
+            color: white; /* Title color */
+        }
+
+        /* Button styling */
+        .btn-20 {
+            background-color: #ffffff; /* Button background color */
+            color: #fff; /* Button text color */
+            cursor: pointer; /* Pointer on hover */
+            font-size: 100%; /* Button font size */
+            font-weight: 900; /* Bold text */
+            padding: 0.8rem 3rem; /* Padding for button */
+            border-radius: 99rem; /* Rounded button */
+            border-width: 2px; /* Border width */
+            position: relative; /* Relative positioning */
+            transition: transform 0.2s ease; /* Transition effect on hover */
+        }
+
+        /* Main container styling */
+        #main-bca {
+            min-height: 100vh; /* Minimum height of main container */
+            width: 80%; /* Width of main container */
+            margin: 40px auto; /* Centered with margin */
+            border: 1px solid grey; /* Border around container */
+            border-radius: 30px; /* Rounded corners */
+            padding: 20px; /* Padding inside container */
+            background-color: #444444; /* Background color for container */
+        }
+
+        /* Heading styling */
+        .heading {
+            margin: 20px 0; /* Margin around heading */
+            text-align: center; /* Center align text */
+            font-size: 30px; /* Font size */
+            color: #333; /* Color of heading */
+            animation: slideIn 1s ease-out forwards; /* Slide in animation */
+        }
+
+        /* Semester cards layout */
+        #semester {
+            display: flex; /* Flexbox layout */
+            justify-content: space-around; /* Space between items */
+            align-items: center; /* Center items vertically */
+            flex-wrap: wrap; /* Wrap items to next line */
+            gap: 50px; /* Gap between items */
+            padding: 50px; /* Padding around semester cards */
+        }
+
+        /* Semester card link styling */
+        #semester a {
+            text-decoration: none; /* No underline */
+        }
+
+        /* Semester card styling */
+        .sem {
+            height: 300px; /* Height of the semester card */
+            width: 300px; /* Width of the semester card */
+            border: 1px solid black; /* Border around card */
+            border-radius: 15px; /* Rounded corners */
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content */
+            align-items: center; /* Center items */
+            overflow: hidden; /* Hide overflow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition on hover */
+            background-color: #fff; /* Background color for card */
+        }
+
+        /* Hover effect for semester cards */
+        .sem:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+        }
+
+        /* Image styling within semester card */
+        .sem img {
+            height: 80%; /* Image height */
+            width: 100%; /* Image width */
+            object-fit: cover; /* Cover image */
+        }
+
+        /* Footer styling */
+        .footer {
+            height: 100px; /* Height of footer */
+            width: 100%; /* Full width */
+            background-color: #ffffff; /* Background color */
+            color: #000; /* Text color */
+            display: flex; /* Flexbox layout */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        /* Footer container styling */
+        .footer_container {
+            text-align: center; /* Center align text */
+        }
+
+        /* Keyframes for slide-in animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px); /* Start position */
+                opacity: 0; /* Invisible at start */
+            }
+            100% {
+                transform: translateY(0); /* End position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        /* Strong tag styling */
+        strong {
+            font-size: 20px; /* Font size for strong text */
+        }
+
+        /* Keyframes for fading effects */
+        @keyframes autoOpacity {
+            0%, 50%, 100% { opacity: 0.5; }
+            25%, 75% { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0; /* Start invisible */
+            }
+            100% {
+                opacity: 1; /* Fully visible */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <h1>Hello <%=firstName%>!</h1> <!-- Greeting with user's first name -->
+            <form action="/logout" method="POST" style="display: inline;">
+                <button class="btn-20" type="submit"><span>Logout</span></button> <!-- Logout button -->
+            </form>
+        </nav>
+    </header>
+    
+    <div class="heading">
+        <h1 class="h1">BCA NOTES</h1> <!-- Main heading for BCA notes -->
+    </div>
+    
+    <div id="main-bca">
+        <div id="semester">
+            <!-- Semester 1 card -->
+            <a href="/home/bca/sem1">
+                <div class="sem">
+                    <img src="https://img.freepik.com/free-vector/nursery-school-abstract-concept-vector-illustration-high-quality-pre-school-program-cooperative-private-nursery-educational-space-bilingual-kindergarten-yealding-infant-abstract-metaphor_335657-4146.jpg" alt="BCA Semester 1">
+                    <h2>SEMESTER 1</h2>
+                </div>
+            </a>
+            <!-- Semester 2 card -->
+            <a href="/home/bca/sem2">
+                <div class="sem">
+                    <img src="https://img.freepik.com/free-vector/speech-therapy-abstract-concept-vector-illustration-speech-pathology-therapy-improve-language-development-delay-speaking-disability-treatment-tongue-exercise-home-abstract-metaphor_335657-4087.jpg" alt="BCA Semester 2">
+                    <h2>SEMESTER 2</h2>
+                </div>
+            </a>
+            <!-- Semester 3 card -->
+            <a href="/home/bca/sem3">
+                <div class="sem">
+                    <img src="https://img.freepik.com/premium-vector/creative-solution-concept-illustration_288067-433.jpg" alt="BCA Semester 3">
+                    <h2>SEMESTER 3</h2>
+                </div>
+            </a>
+            <!-- Semester 4 card -->
+            <a href="/home/bca/sem4">
+                <div class="sem">
+                    <img src="https://img.freepik.com/free-vector/virtual-influencer-abstract-concept-vector-illustration-influencer-marketing-digital-agency-service-virtual-character-computer-generated-person-social-media-brand-avatar-abstract-metaphor_335657-4171.jpg" alt="BCA Semester 4">
+                    <h2>SEMESTER 4</h2>
+                </div>
+            </a>
+            <!-- Semester 5 card -->
+            <a href="/home/bca/sem5">
+                <div class="sem">
+                    <img src="https://img.freepik.com/premium-vector/intelligence-flat-illustration-editable-vector-design_203633-3479.jpg" alt="BCA Semester 5">
+                    <h2>SEMESTER 5</h2>
+                </div>
+            </a>
+            <!-- Semester 6 card -->
+            <a href="/home/bca/sem6">
+                <div class="sem">
+                    <img src="https://img.freepik.com/free-vector/information-technology-concept-illustration_114906-568.jpg" alt="BCA Semester 6">
+                    <h2>SEMESTER 6</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer_container">
+                <p>&copy; 2024 BCA Notes. All rights reserved.</p> <!-- Footer copyright -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

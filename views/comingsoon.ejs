@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            /*background: linear-gradient(135deg, #44444444, #cfcecd);*/
+            background-color: #444444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out, slideIn 1s ease-out;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out, slideIn 1s ease-out;
+            color: #00d1cd  ;
+
+        }
+        .try-again {
+            background-color: #008d8b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .try-again:hover {
+            background-color: #00d1cd;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>We're working hard to get things ready. Stay tuned!</p>
+        <button class="try-again" onclick="window.location.href='/home'">Home</button>
+
+    </div>
+</body>
+</html>

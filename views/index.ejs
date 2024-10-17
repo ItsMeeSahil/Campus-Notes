@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Notes</title>
+    <link rel="stylesheet" href="../stylesheets/style.css"> <!-- Link to the external CSS stylesheet -->
+</head>
+<body>
+    <div class="header">
+        <header>
+            <nav class="nav">
+                <h1>Hello <%= firstName %>!</h1> <!-- Display the logged-in user's first name -->
+                <h2><a href="#main">Departments</a></h2> <!-- Link to the Departments section -->
+                <h2><a href="#playlist">Playlist</a></h2> <!-- Link to the Playlist section -->
+                <h2><a href="#profile">Profile</a></h2> <!-- Link to the Profile section -->
+                <form action="/logout" method="POST" style="display: inline;"> <!-- Logout form -->
+                    <button class="btn-20" type="submit"><span>Logout</span></button> <!-- Logout button -->
+                </form>
+            </nav>
+        </header>
+        
+        <div class="welcomeBoard">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide first">
+                        <img src="/images/image1.png" alt="Image 1"> <!-- Slider image -->
+                    </div>
+                    <div class="slide">
+                        <img src="https://img.freepik.com/premium-vector/university-building-landscape-walking-students-young-man-woman-sitting-grass-vector-campus-with-green-grass-trees-blue-college-building-exterior-education-institution-people-studying_316839-6129.jpg?w=1380" alt="Image 2"> <!-- Slider image -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main" id="main"> <!-- Main content section -->
+            <div class="department">
+                <h1>DEPARTMENTS</h1> <!-- Section title for departments -->
+                <div class="departmentAvailable">
+                    <!-- Links to different department pages with images -->
+                    <a href="/home/bca"><div class="dept" id="BCA"><img src="https://i.pinimg.com/564x/df/10/48/df1048027038da1c9c592c2b5b546840.jpg" alt="bca"><h2>BCA</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="CSE"><img src="https://i.pinimg.com/564x/8c/9a/01/8c9a01b5441a0e33562971bfd41f3186.jpg" alt="cse"><h2>CSE</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="BSC"><img src="https://img.freepik.com/free-vector/investigation-concept-illustration_114360-21931.jpg?t=st=1719933419~exp=1719937019~hmac=297e6f5fef82fe91a8e216b05318b8618c005b99ee8d0c4dc1034be431d727c7&w=826" alt="bsc"><h2>BSC</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="EE"><img src="https://i.pinimg.com/564x/1f/a2/98/1fa298d61d9b338bcc9ff25ee2e97286.jpg" alt="EE"><h2>EE</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="BBA"><img src="https://i.pinimg.com/564x/c5/e7/30/c5e7305c0259beb7fc3d2f7ef3df6bb1.jpg" alt="bba"><h2>BBA</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="ME"><img src="https://i.pinimg.com/564x/4e/57/21/4e5721eef810d4cec0f50d838392d336.jpg" alt="me"><h2>ME</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="JMC"><img src="https://i.pinimg.com/564x/b2/0a/20/b20a20c0445a4ae589d36508cfc7e0f1.jpg" alt="jmc"><h2>JMC</h2></div></a>
+                    <a href="/comingsoon"><div class="dept" id="civil"><img src="https://i.pinimg.com/564x/de/57/7d/de577dada01f7fb3ba1f2ec8b747915f.jpg" alt="civil"><h2>CIVIL</h2></div></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="div2" id="playlist"> <!-- Playlist section -->
+            <h1>PLAYLIST</h1>
+            <div class="main2">
+                <div class="Playlist">
+                    <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube">
+                    <a href="/home/studyPlaylist"><h2>Study Playlist</h2></a> <!-- Link to study playlist -->
+                </div>
+
+                <div class="Playlist">
+                    <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151320961.jpg?t=st=1719935967~exp=1719939567~hmac=d884b74a77d589ce5206ea900703b871fa30d973eef0007a31f99e80748bf632&w=826" alt="youtube">
+                    <a href="/home/codingPlaylist"><h2>Coding Playlist</h2></a> <!-- Link to coding playlist -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="profile" id="profile"> <!-- User profile section -->
+            <h1>User Profile</h1>
+            <p><strong>Name:</strong> <%= firstName %> <%= lastName %></p> <!-- Display user's full name -->
+            <p><strong>Email:</strong> <%= email %></p> <!-- Display user's email -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_container">
+            <p><strong>CAMPUS NOTES</strong> <br>An app where students can search for notes</p> <!-- Footer content -->
+        </div>
+    </div>
+</body>
+</html>
